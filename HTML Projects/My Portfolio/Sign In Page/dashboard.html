@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fintech Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-background"></div>
+    <nav class="dashboard-nav">
+        <div class="logo">FinEdge</div>
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Accounts</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+        <div class="user-profile">
+            <span class="user-initials">IA</span>
+        </div>
+    </nav>
+    <main class="dashboard-main">
+        <section class="welcome-section">
+            <h1>Welcome back, Increase</h1>
+            <p>Your financial overview at a glance. Track your accounts, monitor transactions, and gain insights to make smarter decisions.</p>
+        </section>
+        <section class="dashboard-cards">
+            <div class="card">
+                <h3>Total Balance</h3>
+                <p class="amount">$14,450.00</p>
+            </div>
+            <div class="card">
+                <h3>Recent Transactions</h3>
+                <ul class="transactions">
+                    <li>
+                        <span>Starbucks</span>
+                        <span class="debit">- $5.50</span>
+                    </li>
+                    <li>
+                        <span>Salary</span>
+                        <span class="credit">+ $2,000.00</span>
+                    </li>
+                    <li>
+                        <span>Amazon</span>
+                        <span class="debit">- $120.99</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Spending Analytics</h3>
+                <div class="analytics-bar">
+                    <div class="bar-label">Food</div>
+                    <div class="bar" style="width: 60%; background: #0078d7;"></div>
+                </div>
+                <div class="analytics-bar">
+                    <div class="bar-label">Shopping</div>
+                    <div class="bar" style="width: 30%; background: #00bfae;"></div>
+                </div>
+                <div class="analytics-bar">
+                    <div class="bar-label">Bills</div>
+                    <div class="bar" style="width: 10%; background: #ffb300;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

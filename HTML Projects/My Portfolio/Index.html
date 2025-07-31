@@ -4,51 +4,334 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Increase Gideon | Frontend Developer</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #1a2238;
+}
+
+main {
+    max-width: 1400px;
+    margin: 40px auto 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d97706;
+    margin-bottom: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a2238;
+    margin-bottom: 0.7rem;
+    font-family: 'Georgia', serif;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+
+header {
+    background-color: #1a2238;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    margin: 0 15px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover, nav ul li a:focus {  
+    color: #fca311;
+    transition: color 0.3s;
+}
+
+nav ul li a:focus-visible {
+    outline: 2px solid #fca311;
+    outline-offset: 2px;
+}
+
+
+#hero {
+    background-color: #1a2238;
+    color: #ffffff;
+    padding: 100px 20px;
+    border-radius: 10px;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 15rem;
+}
+
+.hero-text {
+    padding-left: 13%;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    color: #fca311;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+#hero h2 {
+    color: #ffffff;
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+
+#portfolio {
+    background-color: white;
+    border-radius: 12px;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #1a2238;
+    padding: 24px;
+    margin: 32px auto;
+    max-width: 500px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover, .project-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+}
+
+.project-preview {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.project-card ul {
+    padding-left: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.project-card li {
+    margin-bottom: 0.5rem;
+}
+
+.project-btn {
+    display: inline-block;
+    background-color: #d97706;
+    color: #1a2238;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-btn:hover, .project-btn:focus {
+    background-color: #1a2238;
+    color: #d97706;
+    transform: translateY(-2px);
+}
+
+.project-btn:focus-visible {
+    outline: #1a2238 solid 2px;
+    outline-offset: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a2238;
+    color: #ffffff;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fca311;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.social-links {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.social-links a {
+    color: #fca311;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 15px;
+    transition: color 0.2s;
+}
+
+.social-links a:hover, .social-links a:focus {
+    color: white;
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+@media (max-width:1200px) {
+    .hero-container {
+        gap: 5rem;
+        justify-content: center;
+    }
+    .hero-text {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .hero-text {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+    </style>
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="hero">
-            <h1>Increase Gideon</h1>
-            <p>Frontend Web Developer</p>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>Increase Gideon</h1>
+                    <h2>Frontend Web Developer</h2>
+                </div>
+                <div class="hero-image">
+                    <img src="Hero.jpg" alt="Increase Gideon Profile Picture" />
+                </div>
+            </div>
         </section>
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a passionate frontend developer with a knack for creating beautiful, clean, user-friendly and functional web applications. I love coding and am always eager to learn new technologies.</p>
+            <p>I'm a passionate frontend developer with a knack for creating beautiful, clean, user-friendly and functional web applications.</p>
+            <p>My aim is to help businesses connect with their clients through engaging web experiences, contribute to open-source projects, and bring ideas to life on the web. I love coding and I'm always eager to learn new technologies.</p>
         </section>
 
         <section id="portfolio">
             <h2>My Portfolio</h2>
             <div class="project-card">
-                <h3>Project Title 1</h3>
-                <p>A brief description of this awesome project.</p>
-                <a href="#">View Project</a>
+                <img src="Finedge Preview.png" alt="FinEdge Webpage Preview" class="project-preview"/>
+                <h3>FinEdge Webpage</h3>
+                <ul>
+                    <li>Created a responsive sign-in, signup, and dashboard page for FinEdge, a financial services company.</li>
+                    <li>Includes dashboard functionality and user authentication forms.</li>
+                    <li>Technologies used: HTML & CSS.</li>
+                </ul>
+                <a href="Sign In Page/Index.html" target="_blank" class="project-btn">View Project</a>
             </div>
             <div class="project-card">
-                <h3>Project Title 2</h3>
-                <p>A brief description of another awesome project😊.</p>
-                <a href="#">View Project</a>
+                <img src="CSS Preview.png" alt="CSS Landing Page Preview" class="project-preview"/>
+                <h3>CSS Landing Page</h3>
+                <ul>
+                    <li>Developed a responsive Landing Page using CSS Grid and Flexbox.</li>
+                    <li>Implemented hover effects and transitions for a smooth user experience.</li>
+                    <li>Technologies used: HTML & CSS.</li>
+                </ul>
+                <a href="CSS/Index.html" target="_blank" class="project-btn">View Project</a>
             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'd love to hear from you! Here's how you can reach me:</p>
-            <a href="mailto:increaseakano@gmail.com" class="email-link">Increaseakano@gmail.com</a>
         </section>
     </main>
 
     <footer>
-        <p>Designed with love by 🗣️[Inkri:s]</p>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'd love to hear from you! Here's how you can reach me:</p>
+            <div class="social-links">
+                <a href="mailto:increaseakano@gmail.com" target="_blank" rel="noopenerS" title="Gmail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://instagram.com/inkri.s" target="_blank" rel="noopener" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://tiktok.com/@increase.gideon" target="_blank" rel="noopener" title="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+            <p>Feel free to connect with me on social media or send me an email. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+        </section>
+        <p>Styled By 🗣️[Inkri:s]</p>
         <p>&copy; 2025 Increase Gideon. All rights reserved.</p>
     </footer>
 </body>
